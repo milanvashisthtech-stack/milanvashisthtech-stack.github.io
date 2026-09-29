@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680">
+<defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071b45"/><stop offset="1" stop-color="#123a72"/></linearGradient>
+<linearGradient id="accent" x1="0" x2="1"><stop stop-color="#55c7ff"/><stop offset="1" stop-color="#7b8cff"/></linearGradient>
+</defs>
+<rect width="1200" height="680" rx="28" fill="#eef4fb"/>
+<rect x="0" y="0" width="1200" height="86" rx="28" fill="url(#bg)"/>
+<rect x="0" y="58" width="1200" height="28" fill="url(#bg)"/>
+<text x="48" y="39" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">UPI Transaction Analytics</text>
+<text x="48" y="66" fill="#b9d7f6" font-family="Arial,sans-serif" font-size="13">Executive Dashboard • Power BI</text>
+<rect x="860" y="22" width="92" height="32" rx="16" fill="#ffffff" opacity=".12"/><text x="906" y="43" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="12">REGION</text>
+<rect x="962" y="22" width="92" height="32" rx="16" fill="#ffffff" opacity=".12"/><text x="1008" y="43" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="12">CHANNEL</text>
+<rect x="1064" y="22" width="88" height="32" rx="16" fill="#ffffff" opacity=".12"/><text x="1108" y="43" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="12">DATE</text>
+
+<rect x="48" y="110" width="255" height="92" rx="14" fill="#fff" stroke="#d6e3f1"/><text x="66" y="148" fill="#0b2347" font-family="Arial,sans-serif" font-size="27" font-weight="700">100K</text><text x="66" y="178" fill="#71849a" font-family="Arial,sans-serif" font-size="11" font-weight="700">TOTAL TRANSACTIONS</text><rect x="321" y="110" width="255" height="92" rx="14" fill="#fff" stroke="#d6e3f1"/><text x="339" y="148" fill="#0b2347" font-family="Arial,sans-serif" font-size="27" font-weight="700">₹ —</text><text x="339" y="178" fill="#71849a" font-family="Arial,sans-serif" font-size="11" font-weight="700">TOTAL AMOUNT</text><rect x="594" y="110" width="255" height="92" rx="14" fill="#fff" stroke="#d6e3f1"/><text x="612" y="148" fill="#0b2347" font-family="Arial,sans-serif" font-size="27" font-weight="700">2%</text><text x="612" y="178" fill="#71849a" font-family="Arial,sans-serif" font-size="11" font-weight="700">FRAUD RATE</text><rect x="867" y="110" width="285" height="92" rx="14" fill="#fff" stroke="#d6e3f1"/><text x="885" y="148" fill="#0b2347" font-family="Arial,sans-serif" font-size="27" font-weight="700">10K</text><text x="885" y="178" fill="#71849a" font-family="Arial,sans-serif" font-size="11" font-weight="700">CUSTOMERS</text>
+
+<rect x="48" y="224" width="565" height="380" rx="16" fill="#fff" stroke="#d6e3f1"/>
+<text x="74" y="257" fill="#0b2347" font-family="Arial,sans-serif" font-size="16" font-weight="700">Transactions by Timestamp</text>
+<line x1="80" y1="548" x2="578" y2="548" stroke="#c9d7e6"/><line x1="80" y1="290" x2="80" y2="548" stroke="#c9d7e6"/>
+<polyline points="90,510 150,472 210,486 270,418 330,445 390,366 450,395 510,318 570,340" fill="none" stroke="#2878d7" stroke-width="5"/>
+<polyline points="90,510 150,472 210,486 270,418 330,445 390,366 450,395 510,318 570,340 570,548 90,548" fill="url(#accent)" opacity=".08"/>
+<circle cx="90" cy="510" r="5" fill="#2878d7"/><circle cx="150" cy="472" r="5" fill="#2878d7"/><circle cx="210" cy="486" r="5" fill="#2878d7"/><circle cx="270" cy="418" r="5" fill="#2878d7"/><circle cx="330" cy="445" r="5" fill="#2878d7"/><circle cx="390" cy="366" r="5" fill="#2878d7"/><circle cx="450" cy="395" r="5" fill="#2878d7"/><circle cx="510" cy="318" r="5" fill="#2878d7"/><circle cx="570" cy="340" r="5" fill="#2878d7"/>
+<text x="80" y="580" fill="#8798aa" font-family="Arial,sans-serif" font-size="10">2021</text><text x="548" y="580" fill="#8798aa" font-family="Arial,sans-serif" font-size="10">2025</text>
+
+<rect x="637" y="224" width="250" height="180" rx="16" fill="#fff" stroke="#d6e3f1"/>
+<text x="662" y="257" fill="#0b2347" font-family="Arial,sans-serif" font-size="15" font-weight="700">Transactions by Status</text>
+<circle cx="762" cy="330" r="55" fill="none" stroke="#dce7f3" stroke-width="28"/><path d="M762 275 A55 55 0 0 1 813 351" fill="none" stroke="#2878d7" stroke-width="28"/><path d="M813 351 A55 55 0 0 1 762 385" fill="none" stroke="#6d8fb5" stroke-width="28"/>
+<text x="762" y="333" text-anchor="middle" fill="#0b2347" font-family="Arial,sans-serif" font-size="15" font-weight="700">STATUS</text>
+
+<rect x="911" y="224" width="241" height="380" rx="16" fill="#fff" stroke="#d6e3f1"/>
+<text x="936" y="257" fill="#0b2347" font-family="Arial,sans-serif" font-size="15" font-weight="700">Amount by Merchant</text>
+<text x="936" y="NaN" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Alpha</text><rect x="936" y="NaN" width="142.6" height="14" rx="7" fill="#2878d7"/><text x="936" y="NaN" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Beta</text><rect x="936" y="NaN" width="114.7" height="14" rx="7" fill="#2878d7"/><text x="936" y="NaN" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Gamma</text><rect x="936" y="NaN" width="94.55" height="14" rx="7" fill="#2878d7"/><text x="936" y="NaN" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Delta</text><rect x="936" y="NaN" width="75.95" height="14" rx="7" fill="#2878d7"/><text x="936" y="NaN" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Other</text><rect x="936" y="NaN" width="57.35" height="14" rx="7" fill="#2878d7"/>
+
+<rect x="637" y="424" width="250" height="180" rx="16" fill="#fff" stroke="#d6e3f1"/>
+<text x="662" y="456" fill="#0b2347" font-family="Arial,sans-serif" font-size="15" font-weight="700">Interactive Filters</text>
+<rect x="662" y="475" width="200" height="30" rx="8" fill="#f2f6fb"/><text x="676" y="495" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Region ▾</text>
+<rect x="662" y="515" width="200" height="30" rx="8" fill="#f2f6fb"/><text x="676" y="535" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Channel ▾</text>
+<rect x="662" y="555" width="200" height="30" rx="8" fill="#f2f6fb"/><text x="676" y="575" fill="#71849a" font-family="Arial,sans-serif" font-size="10">Timestamp ▾</text>
+</svg>
