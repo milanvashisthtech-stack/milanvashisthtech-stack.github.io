@@ -604,3 +604,14 @@ body.modal-open{overflow:hidden}
 @media (prefers-reduced-motion: reduce){
  .dashboard-modal-backdrop{backdrop-filter:none}
 }
+
+/* ORIGINAL UPI DASHBOARD GALLERY */
+.dashboard-count{position:absolute;right:10px;bottom:10px;padding:6px 9px;border-radius:999px;background:rgba(8,35,73,.88);color:#fff;font-size:.58rem;font-weight:900;letter-spacing:.04em}
+.skill-dashboard-preview{position:relative}
+.dashboard-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.dashboard-gallery-item{margin:0;padding:12px;border:1px solid #d9e6f3;border-radius:14px;background:#fff;box-shadow:0 8px 22px rgba(18,53,92,.07)}
+.dashboard-gallery-item figcaption{display:flex;flex-direction:column;gap:3px;margin:0 0 10px}
+.dashboard-gallery-item figcaption strong{font-size:.9rem;color:#17324f}
+.dashboard-gallery-item figcaption span{font-size:.68rem;color:#71849a}
+.dashboard-gallery-item img{display:block;width:100%;height:auto;border-radius:9px;border:1px solid #e1eaf3}
+@media (max-width:700px){.dashboard-gallery{grid-template-columns:1fr}.dashboard-count{font-size:.52rem}}
