@@ -11,13 +11,16 @@ permissions:
 jobs:
   extract-certificates:
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'Extract certificate images') == false
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Extract six certificate images
         run: |
+          if [ ! -f Milan_Vashisth_Certificate_Images.zip ]; then
+            echo "Certificate ZIP is already removed; nothing to do."
+            exit 0
+          fi
           mkdir -p certificates
           unzip -o Milan_Vashisth_Certificate_Images.zip -d /tmp/certificates
           cp /tmp/certificates/ibm-python-flask.jpg certificates/ibm-python-flask.jpg
@@ -32,6 +35,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add certificates/*.jpg Milan_Vashisth_Certificate_Images.zip
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
           git commit -m "Extract certificate images"
           git push
