@@ -615,3 +615,19 @@ body.modal-open{overflow:hidden}
 .dashboard-gallery-item figcaption span{font-size:.68rem;color:#71849a}
 .dashboard-gallery-item img{display:block;width:100%;height:auto;border-radius:9px;border:1px solid #e1eaf3}
 @media (max-width:700px){.dashboard-gallery{grid-template-columns:1fr}.dashboard-count{font-size:.52rem}}
+
+/* INTERACTIVE SKILL PREVIEWS */
+.skill-preview-card{cursor:pointer;position:relative}
+.skill-preview-card:focus-visible{outline:3px solid #72bdf1;outline-offset:3px}
+.skill-card-preview{margin-top:14px;border:1px solid #d9e6f3;border-radius:12px;overflow:hidden;background:#eef4fb;box-shadow:0 8px 22px rgba(18,53,92,.08)}
+.skill-card-preview img{display:block;width:100%;height:auto}
+.skill-detail-modal{position:fixed;inset:0;z-index:3001;display:none;align-items:center;justify-content:center;padding:24px}
+.skill-detail-modal.is-open{display:flex}
+.skill-detail-backdrop{position:absolute;inset:0;background:rgba(3,14,31,.82);backdrop-filter:blur(6px)}
+.skill-detail-panel{position:relative;z-index:1;width:min(1180px,96vw);max-height:92vh;overflow:auto;background:#f8fbff;border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:28px;box-shadow:0 28px 90px rgba(0,0,0,.38)}
+.skill-detail-panel h2{margin:0 0 10px}
+.skill-detail-panel h2 span{color:#1267d8}
+.skill-detail-copy{color:#62758a;max-width:780px;line-height:1.6;margin:0 0 20px}
+.skill-detail-panel img{display:block;width:100%;border-radius:12px;border:1px solid #d9e6f3;background:#fff}
+@media (max-width:700px){.skill-detail-modal{padding:10px}.skill-detail-panel{padding:18px;border-radius:14px}}
+@media (prefers-reduced-motion: reduce){.skill-detail-backdrop{backdrop-filter:none}}
