@@ -459,3 +459,88 @@ footer { border-top: 1px solid #dbe8f5; color: #71819a; background: #fff; font-s
     .timeline-item { grid-template-columns: 75px 2px 1fr; gap: 13px; }
     .footer-inner { flex-direction: column; justify-content: center; gap: 4px; }
 }
+
+/* PROJECT VISUAL PREVIEWS */
+.retail-preview,.sql-preview{
+    margin-top:18px;
+    padding:16px;
+    border:1px solid #d7e8f7;
+    border-radius:13px;
+    background:linear-gradient(145deg,#fafdff,#edf7ff);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+.retail-top,.sql-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#1267d8;
+    font-size:.62rem;
+    font-weight:800;
+    letter-spacing:.1em;
+}
+.retail-top b,.sql-top b{
+    padding:4px 7px;
+    border-radius:5px;
+    background:#fff;
+    border:1px solid #cfe3f4;
+    font-size:.58rem;
+}
+.retail-title{
+    margin:13px 0 10px;
+    color:#071b45;
+    font-size:.78rem;
+    font-weight:800;
+}
+.retail-chart{
+    height:82px;
+    display:flex;
+    align-items:flex-end;
+    gap:6px;
+    padding:0 2px 7px;
+    border-bottom:1px solid #c9dff2;
+}
+.retail-chart i{
+    flex:1;
+    min-height:12px;
+    border-radius:4px 4px 1px 1px;
+    background:linear-gradient(to top,#1267d8,#5fc8ff);
+}
+.retail-insights{
+    display:flex;
+    justify-content:space-between;
+    gap:5px;
+    margin-top:10px;
+    color:#71819a;
+    font-size:.54rem;
+}
+.retail-insights b{color:#1267d8}
+.sql-table{
+    margin-top:12px;
+    border:1px solid #d4e5f3;
+    border-radius:8px;
+    overflow:hidden;
+    background:#fff;
+}
+.sql-row{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    padding:6px 8px;
+    border-bottom:1px solid #edf3f8;
+    color:#526b84;
+    font-size:.56rem;
+    font-weight:600;
+}
+.sql-row:last-child{border-bottom:0}
+.sql-head{
+    background:#f0f7fd;
+    color:#1267d8;
+    font-size:.52rem;
+    font-weight:800;
+}
+.sql-query{
+    margin-top:10px;
+    color:#5d7892;
+    font-family:monospace;
+    font-size:.52rem;
+    letter-spacing:.02em;
+}
