@@ -555,3 +555,5 @@ footer { border-top: 1px solid #dbe8f5; color: #71819a; background: #fff; font-s
 .cert-body{position:relative;z-index:1}.cert-issuer{font-size:.64rem;color:#70839a;font-weight:700}.cert-body h3{margin:7px 0 8px;color:#071b45;font-size:1.02rem}.cert-body p{margin:0;color:#66798f;font-size:.75rem;line-height:1.55}.cert-meta{display:flex;gap:8px;margin-top:15px}.cert-meta span{padding:5px 8px;border-radius:5px;background:#f3f8fc;color:#55708b;font-size:.62rem;font-weight:700}.cert-link{display:inline-block;margin-top:13px;color:#1267d8;font-size:.7rem;font-weight:800;text-decoration:none}.cert-static{color:#71859a}.cert-featured{background:linear-gradient(145deg,#f9fdff,#e9f5ff);border-color:#b9dcf7}
 @media(max-width:900px){.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.cert-grid{grid-template-columns:1fr}}
+
+.cert-clickable{display:block;text-decoration:none;color:inherit;cursor:pointer}.cert-clickable .cert-link{pointer-events:none}.cert-clickable:focus-visible{outline:3px solid #58c8ff;outline-offset:3px}
