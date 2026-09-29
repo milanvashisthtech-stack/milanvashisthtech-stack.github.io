@@ -1,0 +1,37 @@
+name: Extract certificate images
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  extract-certificates:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, 'Extract certificate images') == false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract six certificate images
+        run: |
+          mkdir -p certificates
+          unzip -o Milan_Vashisth_Certificate_Images.zip -d /tmp/certificates
+          cp /tmp/certificates/ibm-python-flask.jpg certificates/ibm-python-flask.jpg
+          cp /tmp/certificates/ibm-generative-ai-essentials.jpg certificates/ibm-generative-ai-essentials.jpg
+          cp /tmp/certificates/data-analytics-with-gen-ai.jpg certificates/data-analytics-with-gen-ai.jpg
+          cp /tmp/certificates/data-analytics-internship-training.jpg certificates/data-analytics-internship-training.jpg
+          cp /tmp/certificates/master-of-chatgpt.jpg certificates/master-of-chatgpt.jpg
+          cp /tmp/certificates/generative-ai-business-intelligence.jpg certificates/generative-ai-business-intelligence.jpg
+          rm Milan_Vashisth_Certificate_Images.zip
+
+      - name: Commit certificate images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add certificates/*.jpg Milan_Vashisth_Certificate_Images.zip
+          git commit -m "Extract certificate images"
+          git push
