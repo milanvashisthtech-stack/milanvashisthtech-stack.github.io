@@ -580,3 +580,27 @@ footer { border-top: 1px solid #dbe8f5; color: #71819a; background: #fff; font-s
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+/* POWER BI DASHBOARD PREVIEW */
+.visualization-card{cursor:pointer;position:relative}
+.visualization-card:focus-visible{outline:3px solid #72bdf1;outline-offset:3px}
+.skill-dashboard-preview{margin-top:14px;border:1px solid #d9e6f3;border-radius:12px;overflow:hidden;background:#eef4fb;box-shadow:0 8px 22px rgba(18,53,92,.08)}
+.skill-dashboard-preview img{display:block;width:100%;height:auto}
+.dashboard-link{display:inline-block;margin-top:12px;font-size:.68rem;font-weight:800;color:#1267d8}
+.dashboard-modal{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:24px}
+.dashboard-modal.is-open{display:flex}
+.dashboard-modal-backdrop{position:absolute;inset:0;background:rgba(3,14,31,.82);backdrop-filter:blur(6px)}
+.dashboard-modal-panel{position:relative;z-index:1;width:min(1180px,96vw);max-height:92vh;overflow:auto;background:#f8fbff;border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:28px;box-shadow:0 28px 90px rgba(0,0,0,.38)}
+.dashboard-modal-panel h2{margin:0 0 10px}
+.dashboard-modal-panel h2 span{color:#1267d8}
+.dashboard-modal-copy{color:#62758a;max-width:760px;line-height:1.6;margin:0 0 20px}
+.dashboard-modal-panel img{display:block;width:100%;border-radius:12px;border:1px solid #d9e6f3}
+.dashboard-close{position:absolute;right:18px;top:14px;width:40px;height:40px;border:0;border-radius:50%;background:#e9f1f8;color:#17324f;font-size:26px;line-height:1;cursor:pointer}
+body.modal-open{overflow:hidden}
+@media (max-width:700px){
+ .dashboard-modal{padding:10px}
+ .dashboard-modal-panel{padding:18px;border-radius:14px}
+}
+@media (prefers-reduced-motion: reduce){
+ .dashboard-modal-backdrop{backdrop-filter:none}
+}
