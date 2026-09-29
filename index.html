@@ -111,9 +111,9 @@
 <div class="section-heading"><div><p class="section-kicker">CREDENTIALS</p><h2>Certificates & <span>Training</span></h2></div><p>A selection of certifications and training completed across data analytics, Python and generative AI.</p></div>
 <div class="cert-grid">
 <a class="cert-card cert-featured cert-clickable" href="#contact"><div class="cert-ribbon">DATA ANALYTICS</div><div class="cert-seal">DA</div><div class="cert-body"><span class="cert-issuer">Career 247</span><h3>Data Analytics with Gen AI</h3><p>Certificate ID: C2473431</p><div class="cert-meta"><span>2026</span><span>Credential</span></div></div></a>
-<a class="cert-card cert-clickable" href="https://courses.career247.skillsnetwork.site/certificates/a326ad58abcc435c90de3cfc49f9dc44" target="_blank" rel="noopener"><div class="cert-ribbon">IBM SKILLS NETWORK</div><div class="cert-seal">AI</div><div class="cert-body"><span class="cert-issuer">Career 247 · IBM Developer Skills Network</span><h3>Generative AI Essentials</h3><p>Issued March 8, 2026</p><span class="cert-link">Open & verify ↗</span></div></a>
-<a class="cert-card cert-clickable" href="https://courses.career247.skillsnetwork.site/certificates/9e503d1ffb684b96a334e23fbb960c03" target="_blank" rel="noopener"><div class="cert-ribbon">IBM SKILLS NETWORK</div><div class="cert-seal">PY</div><div class="cert-body"><span class="cert-issuer">Career 247 · IBM Developer Skills Network</span><h3>AI Applications with Python and Flask</h3><p>Issued March 4, 2026</p><span class="cert-link">Open & verify ↗</span></div></a>
-<a class="cert-card cert-clickable" href="https://courses.career247.skillsnetwork.site/certificates/795de917eb484dafa41ca8ada4857e49" target="_blank" rel="noopener"><div class="cert-ribbon">GENERATIVE AI</div><div class="cert-seal">BI</div><div class="cert-body"><span class="cert-issuer">SkillUpEdTech · Career 247</span><h3>Generative AI Skills for Business Intelligence</h3><p>Issued March 1, 2026</p><span class="cert-link">Open & verify ↗</span></div></a>
+<button class="cert-card cert-clickable cert-modal-trigger" type="button" data-title="Generative AI Essentials" data-image="certificates/ibm-generative-ai-essentials.png" data-verify="https://courses.career247.skillsnetwork.site/certificates/a326ad58abcc435c90de3cfc49f9dc44"><div class="cert-ribbon">IBM SKILLS NETWORK</div><div class="cert-seal">AI</div><div class="cert-body"><span class="cert-issuer">Career 247 · IBM Developer Skills Network</span><h3>Generative AI Essentials</h3><p>Issued March 8, 2026</p><span class="cert-link">View certificate ↗</span></div></button>
+<button class="cert-card cert-clickable cert-modal-trigger" type="button" data-title="AI Applications with Python and Flask" data-image="certificates/ibm-python-flask.png" data-verify="https://courses.career247.skillsnetwork.site/certificates/9e503d1ffb684b96a334e23fbb960c03"><div class="cert-ribbon">IBM SKILLS NETWORK</div><div class="cert-seal">PY</div><div class="cert-body"><span class="cert-issuer">Career 247 · IBM Developer Skills Network</span><h3>AI Applications with Python and Flask</h3><p>Issued March 4, 2026</p><span class="cert-link">View certificate ↗</span></div></button>
+<button class="cert-card cert-clickable cert-modal-trigger" type="button" data-title="Generative AI Skills for Business Intelligence" data-image="certificates/generative-ai-business-intelligence.png" data-verify="https://courses.career247.skillsnetwork.site/certificates/795de917eb484dafa41ca8ada4857e49"><div class="cert-ribbon">GENERATIVE AI</div><div class="cert-seal">BI</div><div class="cert-body"><span class="cert-issuer">SkillUpEdTech · Career 247</span><h3>Generative AI Skills for Business Intelligence</h3><p>Issued March 1, 2026</p><span class="cert-link">View certificate ↗</span></div></button>
 <a class="cert-card cert-clickable" href="#contact"><div class="cert-seal">DA</div><div class="cert-body"><span class="cert-issuer">iStudio</span><h3>Data Analytics Internship Training</h3><p>Training completion · 21 May 2026</p><span class="cert-link cert-static">Certificate of Training</span></div></a>
 <a class="cert-card cert-clickable" href="#contact"><div class="cert-seal">GPT</div><div class="cert-body"><span class="cert-issuer">Coursiv</span><h3>Master of ChatGPT</h3><p>6 hours of training · 26 February 2026</p><span class="cert-link cert-static">Certificate of Completion</span></div></a>
 </div>
@@ -143,5 +143,27 @@
 </section>
 </main>
 <footer><div class="container footer-inner"><span>© 2026 Milan Vashisth</span><span>Data Analyst · HTML & CSS</span></div></footer>
+
+<div id="certificateModal" class="certificate-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
+  <div class="certificate-backdrop" data-close-certificate></div>
+  <div class="certificate-modal-panel">
+    <div class="certificate-modal-top">
+      <div><span class="modal-kicker">CREDENTIAL PREVIEW</span><h3 id="certificateModalTitle">Certificate</h3></div>
+      <button class="certificate-close" type="button" aria-label="Close certificate" data-close-certificate>×</button>
+    </div>
+    <div class="certificate-viewer"><img id="certificateModalImage" src="" alt="Certificate preview"></div>
+    <div class="certificate-modal-actions"><a id="certificateVerify" class="btn btn-primary" href="#" target="_blank" rel="noopener">Open Verification ↗</a><button class="btn btn-outline" type="button" data-close-certificate>Close</button></div>
+  </div>
+</div>
+<script>
+(function(){
+ const modal=document.getElementById('certificateModal'), img=document.getElementById('certificateModalImage'), title=document.getElementById('certificateModalTitle'), verify=document.getElementById('certificateVerify');
+ function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
+ document.querySelectorAll('.cert-modal-trigger').forEach(card=>card.addEventListener('click',()=>{title.textContent=card.dataset.title;img.src=card.dataset.image;img.alt=card.dataset.title+' certificate';verify.href=card.dataset.verify;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}));
+ document.querySelectorAll('[data-close-certificate]').forEach(el=>el.addEventListener('click',close));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close();});
+ img.addEventListener('error',()=>{img.alt='Certificate image will appear here once the certificate file is added to the website.';});
+})();
+</script>
 </body>
 </html>
